@@ -1,0 +1,40 @@
+2024-03-12T08:30:49.021+0500 [ERROR] provider.terraform-provider-azurerm_v3.95.0_x5: Response contains error diagnostic:
+  diagnostic_summary=
+  | parsing "/subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy": parsing segment "staticAuthorizationRules": parsing the AuthorizationRule ID: the segment at position 8 didn't match
+  | 
+  | Expected a AuthorizationRule ID that matched:
+  | 
+  | > /subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/example-resource-group/providers/Microsoft.EventHub/namespaces/namespaceValue/authorizationRules/authorizationRuleValue
+  | 
+  | However this value was provided:
+  | 
+  | > /subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy
+  | 
+  | The parsed Resource ID was missing a value for the segment at position 8
+  | (which should be the literal value "authorizationRules").
+  | 
+   tf_provider_addr=provider diagnostic_attribute="AttributeName(\"eventhub_authorization_rule_id\")" diagnostic_severity=ERROR tf_proto_version=5.4 tf_req_id=2846f760-0630-ffed-7ed2-079f00fa09b2 diagnostic_detail="" tf_resource_type=azurerm_monitor_diagnostic_setting @module=sdk.proto tf_rpc=ValidateResourceTypeConfig @caller=github.com/hashicorp/terraform-plugin-go@v0.19.0/tfprotov5/internal/diag/diagnostics.go:58 timestamp="2024-03-12T08:30:49.020+0500"
+2024-03-12T08:30:49.021+0500 [ERROR] vertex "azurerm_monitor_diagnostic_setting.entra_events" error: parsing "/subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy": parsing segment "staticAuthorizationRules": parsing the AuthorizationRule ID: the segment at position 8 didn't match
+
+Expected a AuthorizationRule ID that matched:
+
+> /subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/example-resource-group/providers/Microsoft.EventHub/namespaces/namespaceValue/authorizationRules/authorizationRuleValue
+
+However this value was provided:
+
+> /subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy
+
+The parsed Resource ID was missing a value for the segment at position 8
+(which should be the literal value "authorizationRules").
+2024-03-12T08:30:49.021+0500 [ERROR] vertex "azurerm_monitor_diagnostic_setting.entra_events (expand)" error: parsing "/subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy": parsing segment "staticAuthorizationRules": parsing the AuthorizationRule ID: the segment at position 8 didn't match
+
+Expected a AuthorizationRule ID that matched:
+
+> /subscriptions/12345678-1234-9876-4563-123456789012/resourceGroups/example-resource-group/providers/Microsoft.EventHub/namespaces/namespaceValue/authorizationRules/authorizationRuleValue
+
+However this value was provided:
+
+> /subscriptions/64ac2d8a-9348-4ff8-ac0d-e986b80f3ada/resourceGroups/entra-events-rg/providers/Microsoft.EventHub/namespaces/entra-sign-in-events-namespace/eventhubs/entra-sign-in-events/authorizationRules/SendPolicy
+
+The parsed Resource ID was missing a value for the segment at position 8
+(which should be the literal value "authorizationRules").
